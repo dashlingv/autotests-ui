@@ -1,7 +1,9 @@
 from playwright.sync_api import Page, expect
 
 from pages.base_page import BasePage
+
 from components.navigation.navbar_component import NavbarComponent
+from components.navigation.sidebar_component import SidebarComponent
 
 
 class DashboardPage(BasePage):
@@ -9,6 +11,7 @@ class DashboardPage(BasePage):
         super().__init__(page)
 
         self.navbar = NavbarComponent(page)
+        self.sidebar = SidebarComponent(page)
 
         self.dashboard_title = page.get_by_test_id('dashboard-toolbar-title-text')
         self.students_title = page.get_by_test_id('students-widget-title-text')
