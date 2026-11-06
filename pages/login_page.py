@@ -8,14 +8,13 @@ class LoginPage(BasePage):
         super().__init__(page)
 
         self.login_form = LoginFormComponent(page)
-
         self.login_button = page.get_by_test_id('login-page-login-button')
         self.registration_link = page.get_by_test_id('login-page-registration-link')
         self.wrong_email_or_password_alert = page.get_by_test_id('login-page-wrong-email-or-password-alert')
 
     def fill_login_form(self, email: str, password: str):
         self.login_form.fill(email, password)
-        expect(self.login_form).to_have_value(email, password)
+        self.login_form.check_visible(email, password)
 
     def login_button_click(self):
         self.login_button.click()
