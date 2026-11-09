@@ -1,8 +1,14 @@
 from playwright.sync_api import Page, expect
 
+from pages.base_page import BasePage
+
 from components.navigation.navbar_component import NavbarComponent
 from components.views.empty_view_component import EmptyViewComponent
-from pages.base_page import BasePage
+from components.views. import ImageUploadWidgetComponent
+from components.courses.create_course_form_component import CreateCourseFormComponent
+from components.courses.create_course_toolbar_view_component import CreateCourseToolbarViewComponent
+from components.courses.create_course_exercises_toolbar_view_component import CreateCourseExerciseFormComponent
+from components.courses. import CreateCourseExercisesToolbarViewComponent
 
 
 class CreateCoursePage(BasePage):

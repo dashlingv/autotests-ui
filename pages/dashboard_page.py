@@ -12,6 +12,7 @@ class DashboardPage(BasePage):
         super().__init__(page)
 
         self.navbar = NavbarComponent(page)
+
         self.sidebar = SidebarComponent(page)
 
         self.dashboard_toolbar = DashboardToolbarViewComponent(page)
